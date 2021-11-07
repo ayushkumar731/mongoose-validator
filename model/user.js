@@ -31,7 +31,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       cast: false,
       required: [true, 'Please enter your user type'],
-      default: 'user',
       enum: ['admin', 'user']
     }
   },

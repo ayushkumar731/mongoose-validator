@@ -49,7 +49,7 @@ const handleSignUp = async (req, res) => {
 }
 
 const updateUserByEmail = async (req, res) => {
-  const { email } = req.body;
+  const { email } = req.query;
   try {
     let  user = await User.findOne({ email });
     await user.update({ $set: req.body }, { runValidators: true });
